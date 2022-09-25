@@ -1,0 +1,357 @@
+{
+  "id": "c8d815f2-794d-419b-b173-f8f57c87df5d",
+  "version": "2.0",
+  "name": "Hillel",
+  "url": "https://demoqa.com",
+  "tests": [{
+    "id": "63d86dce-eb49-4e38-b1a9-aae8df155ed3",
+    "name": "LogIn-LogOut",
+    "commands": [{
+      "id": "35349184-a700-49a1-8c40-52f8e6cf7bab",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72065ea3-2fca-47eb-82f4-ec3c1933d81a",
+      "comment": "",
+      "command": "type",
+      "target": "id=userName",
+      "targets": [
+        ["id=userName", "id"],
+        ["css=#userName", "css:finder"],
+        ["xpath=//input[@id='userName']", "xpath:attributes"],
+        ["xpath=//div[@id='userName-wrapper']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "User"
+    }, {
+      "id": "d233cb11-be71-45a6-97ef-7700250979f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='password-wrapper']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234Test!"
+    }, {
+      "id": "ad9bf36a-1edd-46ae-ab5e-3edc60558af3",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//form[@id='userForm']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3195b5fa-bcb1-4239-bc0b-b748b6415fc5",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=.col-md-5 > #submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='books-wrapper']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a20ed40-53ce-4a76-a982-10e99485ea09",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"userForm\"]/div[1]/h5",
+      "targets": [
+        ["css=h5", "css:finder"],
+        ["xpath=//form[@id='userForm']/div/h5", "xpath:idRelative"],
+        ["xpath=//h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Login in Book Store')]", "xpath:innerText"]
+      ],
+      "value": "Login in Book Store"
+    }, {
+      "id": "67edeb4c-287f-43a4-8d7e-8e88695fb2f7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f1c027bf-d2ce-40de-88b4-4c3cf329c898",
+    "name": "Douple Click",
+    "commands": [{
+      "id": "b0ef3bab-c1e8-473c-b15c-a2f3427ac667",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39af137e-6fd7-4f7c-b45d-a4c6c68343df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) svg",
+      "targets": [
+        ["css=.card:nth-child(1) svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "860aff22-ab23-4727-b886-de49b07937ac",
+      "comment": "",
+      "command": "click",
+      "target": "id=item-4",
+      "targets": [
+        ["id=item-4", "id"],
+        ["css=.show #item-4", "css:finder"],
+        ["xpath=//li[@id='item-4']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div/div/div/div/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Buttons')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5d028ff-4ef8-47d1-8733-b7d1c1a5ac5c",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=doubleClickBtn",
+      "targets": [
+        ["id=doubleClickBtn", "id"],
+        ["css=#doubleClickBtn", "css:finder"],
+        ["xpath=//button[@id='doubleClickBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Double Click Me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72c75cc6-9bf0-4fda-a8b1-a1c1dac0899d",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"doubleClickMessage\"]",
+      "targets": [],
+      "value": "You have done a double click"
+    }, {
+      "id": "cfe874ea-90b7-485e-ba10-469ce7011063",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "13b3e0b6-95ec-4753-bf9e-c8434a49f3df",
+    "name": "CheckBoxt test",
+    "commands": [{
+      "id": "c727a48e-cf8a-4585-b207-3462f57e4898",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbbe49a6-39f3-43b4-9e74-f7b8987bd91e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) svg",
+      "targets": [
+        ["css=.card:nth-child(1) svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed96dd7e-8111-4eb1-91df-d1f0f471d1e7",
+      "comment": "",
+      "command": "click",
+      "target": "id=item-1",
+      "targets": [
+        ["id=item-1", "id"],
+        ["css=.show #item-1", "css:finder"],
+        ["xpath=//li[@id='item-1']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div/div/div/div/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Check Box')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "946996c0-f557-4a0d-ac2f-fc2063f9ba29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rct-icon-expand-close",
+      "targets": [
+        ["css=.rct-icon-expand-close", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9f27128-8022-443b-a49c-e7e58fad156c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rct-node:nth-child(3) .rct-collapse path",
+      "targets": [
+        ["css=.rct-node:nth-child(3) .rct-collapse path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d27b87d9-afaa-4a4e-b087-f34aa8099ad3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rct-node-leaf:nth-child(2) .rct-checkbox > .rct-icon",
+      "targets": [
+        ["css=.rct-node-leaf:nth-child(2) .rct-checkbox > .rct-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c6404dc-1f8c-44a8-94ce-2b85dcf6c061",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"result\"]/span[2]",
+      "targets": [],
+      "value": "excelFile"
+    }, {
+      "id": "286723fe-1272-4cb4-83bf-f8ae58d20ca5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9f1bac25-08e0-41c9-b357-a078d0825b7f",
+    "name": "Delete ",
+    "commands": [{
+      "id": "a7b48d85-4345-4521-bee7-f6ca66e8b0c4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7766f085-1c48-4586-b410-b6e08e4a5e59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .card-up",
+      "targets": [
+        ["css=.card:nth-child(1) .card-up", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b54f6acf-08f8-453b-84b0-4dc50ce96b0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=item-3",
+      "targets": [
+        ["id=item-3", "id"],
+        ["css=.show #item-3", "css:finder"],
+        ["xpath=//li[@id='item-3']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div/div/div/div/div/ul/li[4]", "xpath:idRelative"],
+        ["xpath=//li[4]", "xpath:position"],
+        ["xpath=//li[contains(.,'Web Tables')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "080794d7-86e9-42ab-bec3-1e23a8a629be",
+      "comment": "",
+      "command": "click",
+      "target": "css=#delete-record-2 path",
+      "targets": [
+        ["css=#delete-record-2 path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "46b55235-941b-40a4-ad99-7196c16dd4fa",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "//*[@id=\"app\"]/div/div/div[2]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div/div[2]",
+      "targets": [],
+      "value": "Cantrell"
+    }, {
+      "id": "4c317bb8-7919-4914-81eb-026f7fe3ff1b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bdd0c036-3934-40d2-a09c-1397db9bffa5",
+    "name": "radio button",
+    "commands": [{
+      "id": "5be9f059-a333-42f9-83ef-bce3087e02ed",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bde01da8-9bb3-4d29-9495-42c45346f089",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .card-up",
+      "targets": [
+        ["css=.card:nth-child(1) .card-up", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95fde5aa-8e41-4d79-960e-1b2f945467ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show #item-2 > .text",
+      "targets": [
+        ["css=.show #item-2 > .text", "css:finder"],
+        ["xpath=//li[@id='item-2']/span", "xpath:idRelative"],
+        ["xpath=//li[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Radio Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a37152d-d176-48df-be65-4ea2cf33369e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(2) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(2) > .custom-control-label", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div[2]/div[2]/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Yes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a79c837c-771b-4358-a22b-0a692465dc55",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"app\"]/div/div/div[2]/div[2]/div[2]/p",
+      "targets": [],
+      "value": "You have selected Yes"
+    }, {
+      "id": "0a4d00fd-aaac-4e24-b414-02f2d71e9ebe",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4a05ba76-83d8-4082-b7ee-c919741ab754",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["63d86dce-eb49-4e38-b1a9-aae8df155ed3"]
+  }],
+  "urls": ["https://demoqa.com/"],
+  "plugins": []
+}
