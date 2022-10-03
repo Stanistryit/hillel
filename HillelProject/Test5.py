@@ -20,7 +20,7 @@ driver = webdriver.Chrome(service=Service('F:\\Hillel_Cours\\work\\chromedriver'
 user = "guest"
 password = "welcome2qauto"
 driver.get("https://"+user+":"+password+"@"+"qauto2.forstudy.space/")
-SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Sign In')]")))
+SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-outline-white header_signin']")))
 SignIn.click()
 fpass = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Forgot password')]")))
 fpass.click()

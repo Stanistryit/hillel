@@ -22,7 +22,7 @@ driver.get("https://"+user+":"+password+"@"+"qauto2.forstudy.space/")
 
 # Login in
 
-SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Sign In')]")))
+SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-outline-white header_signin']")))
 SignIn.click()
 email = driver.find_element(By.XPATH, "//input[@id='signinEmail']")
 email.send_keys("testmailgroup1@yopmail.com")

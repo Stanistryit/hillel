@@ -19,9 +19,9 @@ driver = webdriver.Chrome(service=Service('F:\\Hillel_Cours\\work\\chromedriver'
 user = "guest"
 password = "welcome2qauto"
 driver.get("https://"+user+":"+password+"@"+"qauto2.forstudy.space/")
-SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Sign In')]")))
+SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-outline-white header_signin']")))
 SignIn.click()
-element = driver.find_element(By.XPATH, "//h4[@class='modal-title']")
+element = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//h4[@class='modal-title']")))
 
 # assert form name
 
