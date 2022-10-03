@@ -113,3 +113,14 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://127.0.0.1:52219/devtools/browser/bbe251cc-a92d-406a-bc47-0981631ee63e
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://qauto2.forstudy.space."
 1664734592942	Marionette	INFO	Stopped listening on port 52234
+1664782250975	geckodriver	INFO	Listening on 127.0.0.1:55193
+1664782253989	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--no-sandbox" "--remote-debugging-port" "55194" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\PC\\AppData\\Local\\Temp\\rust_mozprofiler4fQuW"
+*** You are running in headless mode.
+1664782254440	Marionette	INFO	Marionette enabled
+1664782254446	Marionette	INFO	Listening on port 55208
+Read port: 55208
+WebDriver BiDi listening on ws://127.0.0.1:55194
+1664782254568	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\PC\\AppData\\Local\\Temp\\rust_mozprofiler4fQuW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55194/devtools/browser/e3acf9ce-fcb2-4473-9eef-8f8f25eb8386

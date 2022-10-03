@@ -1,6 +1,9 @@
+from selenium.webdriver.support import expected_conditions as EC
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
@@ -16,11 +19,12 @@ driver = webdriver.Chrome(service=Service('F:\\Hillel_Cours\\work\\chromedriver'
 user = "guest"
 password = "welcome2qauto"
 driver.get("https://"+user+":"+password+"@"+"qauto2.forstudy.space/")
-SignIn = driver.find_element(By.XPATH, "/html/body/app-root/app-global-layout/div/div/app-header/header/div/div/div[2]/button[2]")
+SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Sign In')]")))
 SignIn.click()
-element = driver.find_element(By.CLASS_NAME, 'modal-title')
+element = driver.find_element(By.XPATH, "//h4[@class='modal-title']")
+
 # assert form name
-time.sleep(2)  # sleep for 2 sec
+
 assert element.text == 'Log in'
 
 driver.close()
