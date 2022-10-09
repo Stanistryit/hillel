@@ -12,6 +12,7 @@ import time
 options = Options()
 options.add_argument("--no-sandbox")
 options.add_argument("incognito")
+options.add_argument("headless")
 # START DRIVER
 # driver = webdriver.Chrome('/home/dima/Завантаження/Hillel/chromedriver', options=options)
 driver = webdriver.Chrome(service=Service('F:\\Hillel_Cours\\work\\chromedriver'), options=options)
@@ -22,15 +23,15 @@ driver.get("https://"+user+":"+password+"@"+"qauto2.forstudy.space/")
 
 # Login in
 
-SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-outline-white header_signin']")))
+SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class$='signin']")))
 SignIn.click()
-email = driver.find_element(By.XPATH, "//input[@id='signinEmail']")
+email = driver.find_element(By.CSS_SELECTOR, "input[id$='Email']")
 email.send_keys("testmailgroup1@yopmail.com")
-password = driver.find_element(By.XPATH, "//input[@id='signinPassword']")
+password = driver.find_element(By.CSS_SELECTOR, "input[id$='Password']")
 password.send_keys("Test_group1")
-remember = driver.find_element(By.XPATH, "//input[@id='remember']")
+remember = driver.find_element(By.CSS_SELECTOR, "input[id^='rem']")
 remember.click()
-loginIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Login')]")))
+loginIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class^='btn btn-p']")))
 loginIn.click()
 elem = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Add car')]")))
 

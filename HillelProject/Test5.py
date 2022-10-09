@@ -12,6 +12,7 @@ import time
 options = Options()
 options.add_argument("--no-sandbox")
 options.add_argument("incognito")
+options.add_argument("headless")
 # START DRIVER
 # driver = webdriver.Chrome('/home/dima/Завантаження/Hillel/chromedriver', options=options)
 driver = webdriver.Chrome(service=Service('F:\\Hillel_Cours\\work\\chromedriver'), options=options)
@@ -20,14 +21,18 @@ driver = webdriver.Chrome(service=Service('F:\\Hillel_Cours\\work\\chromedriver'
 user = "guest"
 password = "welcome2qauto"
 driver.get("https://"+user+":"+password+"@"+"qauto2.forstudy.space/")
-SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-outline-white header_signin']")))
+#Sign in button
+SignIn = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class$='signin']")))
 SignIn.click()
+#Frogot pass
 fpass = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Forgot password')]")))
 fpass.click()
-elem = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//h4[contains(text(), 'Restore access')]")))
+time.sleep(2) # Без него находит кнопку Log in
+elem = WebDriverWait(driver, 40).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "h4[class^='modal-title']"))).text
+# print(elem)
 # assert form name
 
-assert elem.text == 'Restore access'
+assert elem == 'Restore access'
 
 # assert "Restore access" in driver.page_source
 
