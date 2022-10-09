@@ -25,7 +25,8 @@ SignIn.click()
 element = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "h4[class^='modal-title']")))
 
 # assert form name
-
-assert element.text == 'Log in'
+import re
+assert re.match(r'Log in', element.text)
+# assert element.text == 'Log in'
 
 driver.close()

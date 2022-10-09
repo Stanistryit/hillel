@@ -36,8 +36,9 @@ loginIn.click()
 elem = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Add car')]")))
 
 # assert login in
-
-assert elem.text == 'Add car'
+import re
+assert re.match(r'Add car', elem.text)
+# assert elem.text == 'Add car'
 
 # assert "My profile" in driver.page_source
 

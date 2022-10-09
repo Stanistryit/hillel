@@ -19,6 +19,8 @@ password = "welcome2qauto"
 driver.get("https://"+user+":"+password+"@"+"qauto2.forstudy.space/")
 
 # assert title
-assert "Hillel Qauto" in driver.title
-
+# assert "Hillel Qauto" in driver.title
+import re
+title = driver.title
+assert re.match(r'Hillel Qauto', title)
 driver.close()

@@ -38,8 +38,9 @@ elem = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_
 
 # assert alert "Wrong email or password"
 
-assert elem.text == 'Wrong email or password'
-
+# assert elem.text == 'Wrong email or password'
+import re
+assert re.match(r'Wrong email or password', elem.text)
 # assert "Wrong email or password" in driver.page_source
 
 driver.close()

@@ -31,8 +31,9 @@ time.sleep(2) # Без него находит кнопку Log in
 elem = WebDriverWait(driver, 40).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "h4[class^='modal-title']"))).text
 # print(elem)
 # assert form name
-
-assert elem == 'Restore access'
+import re
+assert re.match(r'Restore access', elem)
+# assert elem == 'Restore access'
 
 # assert "Restore access" in driver.page_source
 
